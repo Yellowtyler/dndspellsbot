@@ -57,7 +57,7 @@ public class BotController extends TelegramLongPollingBot {
 
             else {
 
-                message="Заклинание не найдено.";
+                message="Spell could not be found.";
 
             }
             sendMessage(update.getMessage().getChatId(),message);
