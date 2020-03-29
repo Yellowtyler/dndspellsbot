@@ -9,6 +9,7 @@ public class Spell {
     private String index;
     private String name;
     private String[] desc;
+    private String [] higher_level;
     private String page;
     private String range;
     private String[] components;
@@ -57,6 +58,14 @@ public class Spell {
 
     public void setDesc(String[] desc) {
         this.desc = desc;
+    }
+
+    public String[] getHigher_level() {
+        return higher_level;
+    }
+
+    public void setHigher_level(String[] higher_level) {
+        this.higher_level = higher_level;
     }
 
     public String getPage() {

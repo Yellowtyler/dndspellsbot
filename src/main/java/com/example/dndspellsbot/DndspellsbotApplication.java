@@ -7,19 +7,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
+import org.telegram.telegrambots.ApiContextInitializer;
 
 @SpringBootApplication
-public class DndspellsbotApplication implements CommandLineRunner {
+public class DndspellsbotApplication  {
 
 	public static void main(String[] args) {
+		ApiContextInitializer.init();
 		SpringApplication.run(DndspellsbotApplication.class, args);
 	}
 
-
-
-	public void run(String... args) throws Exception {
-		RestTemplate restTemplate = new RestTemplate();
-        Spell spell = restTemplate.getForObject("http://www.dnd5eapi.co/api/spells/misty-step",Spell.class);
-        System.out.println(spell.getClasses()[0].getName());
-	}
 }
